@@ -5,12 +5,12 @@
 .Search{
     border:1px solid black;
     width:100%;
-    height:87.5vh;
+    height:79vh;
 }
 
 .results{
     display:flex;
-    height:69vh;
+    height:54vh;
     flex-direction: column;
     overflow:auto;
 }
@@ -40,6 +40,12 @@ ul{
 form{
     margin-bottom:5vh;
 }
+
+select, input{
+font-size: 1em;
+}
+
+
 
 @media only screen and (max-width:640px){
     h2{

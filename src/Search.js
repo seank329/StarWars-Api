@@ -160,10 +160,12 @@ class Search extends Component {
         let newString=''
         let div=''
         let array=[]
+        let count = 1;
         for (let [key, value] of Object.entries(result)) {
             newString = key + ' : '  +  value
-            div = <div className='entry'>{newString}</div>
+            div = <div className='entry' key={count}>{newString}</div>
             array.push(div)
+            count++;
         }
         return array
     }
@@ -181,7 +183,7 @@ class Search extends Component {
                 <form>
                 <input type='text' onChange={(event)=>this.setSearchQuery(event)} required></input>
                     <select required onChange={(event)=>this.handleSelect(event)}>
-                        <option disable='true' selected> Please Select From Below : </option>
+                        <option disable='true' defaultValue> Please Select From Below : </option>
                         <option value='film'>Film</option>
                         <option value='people'>People</option>
                         <option value='planets'>Planets</option>
